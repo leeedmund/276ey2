@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link th:href="@{/styles/style.css}" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+        <!-- <a class="logo" href="/">Test</a> -->
+
+        <div class="header">
+            <h2>Hello&nbsp;</h2>
+            <h2 class="name">insert name here</h2>
+            <button onclick="window.location.href='https://google.com';">
+                Add Student</button>
+        </div>
+        <h3>Student Roster</h3>
+        <ul>
+            <li th:each="user:${us}">
+                <span th:text="${user.name}"></span> 
+                <span th:text="${user.gpa}"></span> 
+                <span th:text="${user.userName}"></span>
+            </li>
+        </ul>
+    </header>
+
+
+
+</body>
+</html>
